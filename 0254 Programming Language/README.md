@@ -1,5 +1,5 @@
 # 0254 - Programming Language
-### Submitted challenge
+## Submitted challenge
 ```abap
 *&---------------------------------------------------------------------*
 *& Report ZPROG_BASIS2_E27
@@ -41,7 +41,7 @@ START-OF-SELECTION .
   ENDIF.
 ```
 
-### Teacher's feedback
+## Teacher's feedback
 > Voici le retour concernant ton challenge : 
 > ![image](https://user-images.githubusercontent.com/389415/112306390-09ae3580-8ca0-11eb-9cef-99dc5ef88ed0.png)
 > -	Ligne 10 et 11 : Il n'est pas nécessaire de déclarer les variables "airline(3)" et idemploye(10) car tu peux réutiliser les paramètres pa_01 et pa_02 qui contiennent la valeur > saisie par l'utilisateur
