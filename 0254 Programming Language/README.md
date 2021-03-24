@@ -46,7 +46,7 @@ START-OF-SELECTION .
 > ![image](https://user-images.githubusercontent.com/389415/112306390-09ae3580-8ca0-11eb-9cef-99dc5ef88ed0.png)
 > -	Ligne 10 et 11 : Il n'est pas nécessaire de déclarer les variables "airline(3)" et idemploye(10) car tu peux réutiliser les paramètres pa_01 et pa_02 qui contiennent la valeur > saisie par l'utilisateur
 > De plus, pour ces variables, il aurait fallu utiliser les data-elments existant afin d'utiliser les principes de réutilisabilité et facilité de maintenance 😉
- 
- ![image](https://user-images.githubusercontent.com/389415/112306451-1a5eab80-8ca0-11eb-8c05-7628f89aa1cf.png)
+> 
+> ![image](https://user-images.githubusercontent.com/389415/112306451-1a5eab80-8ca0-11eb-8c05-7628f89aa1cf.png)
 >	- Ligne 29 : si tu arrives ici, c'est que l'utilisateur a saisi des valeurs sinon le programme se serait arrêté à la ligne 25 (EXIT.) Fait un test avec le debugger (/h dans la zone de commande avant d'exécuter le programme)
 >	Tu peux donc juste afficher les valeurs des 2 paramètres sans utilisés les variables déclarées en ligne 10 et 11
