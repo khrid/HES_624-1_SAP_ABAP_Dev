@@ -1,4 +1,4 @@
-# 0254 - Programming Language
+# 0354 - Module Global
 ## Submitted challenge
 ```abap
 *&---------------------------------------------------------------------*
