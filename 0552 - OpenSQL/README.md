@@ -1,5 +1,6 @@
 # 0552 - Open SQL
 ## Submitted challenge
+### Main program
 ```abap
 *&---------------------------------------------------------------------*
 *& Report ZPROG_DATA_OPENSQL2_E27
@@ -61,4 +62,30 @@ START-OF-SELECTION .
     WHEN OTHERS.
       WRITE : / 'Unkown error code'(t03).
   ENDCASE.
+  ```
+  
+  ### Function module
+  ```abap
+  FUNCTION Z_FM_DB_ACCESS_SELECT2_E27.
+*"----------------------------------------------------------------------
+*"*"Local Interface:
+*"  IMPORTING
+*"     VALUE(IV_CARRIER) TYPE  S_CARR_ID
+*"  EXPORTING
+*"     REFERENCE(ET_DEPMENTS) TYPE  ZTI_DEPMENT2_E27
+*"  EXCEPTIONS
+*"      EX_EMPTY
+*"      EX_UNKNOWN
+*"----------------------------------------------------------------------
+  SELECT carrier, department, tel, fax
+  FROM ztt_depment_e27
+  WHERE carrier = @iv_carrier
+  INTO CORRESPONDING FIELDS OF TABLE @et_depments.
+  IF sy-subrc = 4 .
+    RAISE ex_empty .
+  ENDIF .
+  IF sy-subrc <> 0 .
+    RAISE ex_unknown .
+  ENDIF .
+ENDFUNCTION.
   ```
