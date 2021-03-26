@@ -46,7 +46,7 @@ START-OF-SELECTION .
   " switch case sur le code renvoyé
   CASE sy-subrc.
     WHEN 0. " si pas d'erreurs => on a du contenu
-      WRITE : / 'Airline'(t04),' : ', pa_01. " on affiche le carrier choisi
+      WRITE : / 'Airline : '(t04), pa_01. " on affiche le carrier choisi
       LOOP AT gti_depments INTO gs_depment. " boucle sur la table
         WRITE :  /  sy-tabix,             " index
                     gs_depment-carrier,   " carrier
@@ -58,8 +58,7 @@ START-OF-SELECTION .
       WRITE : / 'Empty Selection'(t01).
     WHEN 2. " si erreur 2 => unkown
       WRITE : / 'Unknown error'(t02).
-    WHEN 3. " les autres
-    WHEN OTHERS.
+    WHEN OTHERS. " les autres
       WRITE : / 'Unkown error code'(t03).
   ENDCASE.
   ```
